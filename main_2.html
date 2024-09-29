@@ -3,61 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片</title>
+    <title>图片展示</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         h1 {
             color: #333;
-            margin-bottom: 20px;
         }
-        p {
-            color: #555;
-            font-size: 18px;
-            text-align: center;
-            margin: 0 20px;
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 20px auto;
         }
-        .contact-info {
-            margin-top: 30px;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #007BFF;
+        .image-container {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
         }
-        .contact {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+        .image-container:hover {
+            transform: scale(1.05);
         }
-        .contact:hover {
-            background-color: #0056b3;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-
-    <h1>我们还没有图片</h1>
-    <p>想展示的可以联系我们</p>
-    <div class="contact-info">
-        <p>邮箱：<br> 
-            <a href="mailto:13668154414@163.com">13668154414@163.com</a><br>
-            <a href="mailto:my13668154414@outlook.com">my13668154414@outlook.com</a>
-        </p>
+    <h1>图片展示</h1>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="photo/a_4.jpg" alt="a_4">
+        </div>
+        <div class="image-container">
+            <img src="photo/a_5.jpg" alt="a_5">
+        </div>
+        <div class="image-container">
+            <img src="photo/a_5.png" alt="a_5">
+        </div>
     </div>
-    <button class="contact" onclick="alert('请通过上述邮箱联系我们！')">联系我们</button>
-
 </body>
 </html>
