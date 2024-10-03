@@ -1,69 +1,93 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主菜单</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .menu {
-            background-color: #575757;
-            overflow: hidden;
-            padding: 10px;
-            position: relative; /* 便于放置照片 */
-        }
-        .menu a {
-            float: left; /* 左对齐 */
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .menu a:hover {
-            background-color: #575757;
-        }
-        .photo {
-            position: absolute;
-            top: 10px; /* 垂直位置 */
-            right: 20px; /* 水平位置 */
-            cursor: pointer; /* 鼠标悬停时显示手形光标 */
-        }
-        .content {
-            padding: 20px;
-        }
-    </style>
+	<meta charset="utf-8">
+	<title>NOLCJ</title>
 </head>
+	
+<style>
+	body{
+		background: #212121;
+		
+	}
+	.A{
+		margin: 0px auto;
+		padding: 20% 0px 0px 0px;
+	}
+	.spinner {
+  	width: 80px;
+  	height: 80px;
+	position: relative;
+	margin: 60px auto;
+	}
+ 
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #5E5E5E;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 0px 60px 5px;
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+ 
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+	.B{
+		color: #5E5E5E;
+		text-align: center;
+		text-shadow: 0px 0px 30px;
+	}
+	p{
+		text-align: center;
+		margin: -30px auto;
+		color: #5E5E5E;
+		text-shadow: 0px 0px 30px;
+	}
+</style>
+
 <body>
-
-<div class="menu">
-    <a href="main_2.html">照片</a>
-    <a href="main_3.html">视频</a>
-    <a href="#" onclick="showAbout()">关于我们</a>
-    <a href="https://space.bilibili.com/3461574469617757?spm_id_from=333.1007.0.0">
-        <img src="photo/a_2.png" alt="照片" class="photo" width="100"> <!-- 控制照片宽度 -->
-    </a>
-</div>
-
-<div class="content" id="content">
-    <h1>欢迎来到我们的页面</h1>
-    <p>请选择上面的菜单项了解更多信息。</p>
-    <p> <a href="https://space.bilibili.com/3461574469617757?spm_id_from=333.1007.0.0">点击这里</a> 关注我们哦！</p>
-</div>
-
-<script>
-    function showAbout() {
-        document.getElementById("content").innerHTML = `
-            <h1>关于我们</h1>
-            <p>这是一个hellokali的网站。</p>
-            <p>欢迎访问，有任何问题请联系我们。</p>
-            <p>联系方式：13668154414@163.com 或 my13668154414@outlook.com</p>
-        `;
-    }
-</script>
-
+	<div class="A">
+		<h1 class="B"> NOLCJ </h1>
+		<p>  </p>
+		<div class="spinner">
+		<div class="double-bounce1"></div>
+		<div class="double-bounce2"></div></div>
+	</div>
+	<script> 
+		document.addEventListener('DOMContentLoaded', function() { 
+			setTimeout(function() {
+			  var userAgent = navigator.userAgent.toLowerCase();
+			  if (/mobile/i.test(userAgent)) {
+				// PE
+				window.location.href = 'main_4.html';
+			  } else {
+				// PC
+				window.location.href = 'main_4.html';
+			  }
+			}, 3000);
+		});
+	</script>
 </body>
 </html>

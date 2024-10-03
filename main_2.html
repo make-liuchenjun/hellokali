@@ -3,58 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片展示</title>
+    <title>视频播放 - mp4_1</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
         h1 {
             color: #333;
+            margin-bottom: 20px;
         }
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        video {
+            width: 80%;
             max-width: 800px;
-            margin: 20px auto;
-        }
-        .image-container {
-            margin: 10px;
-            border: 2px solid #ccc;
+            border: 5px solid #007BFF;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        .image-container:hover {
-            transform: scale(1.05);
+        .controls {
+            margin-top: 15px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>图片展示</h1>
-    <div class="gallery">
-        <div class="image-container">
-            <img src="photo/a_4.jpg" alt="a_4">
-        </div>
-        <div class="image-container">
-            <img src="photo/a_5.jpg" alt="a_5">
-        </div>
-        <div class="image-container">
-            <img src="photo/a_5.png" alt="a_5">
-        </div>
+    <video id="videoPlayer" controls>
+        <source src="mp4_1.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <div class="controls">
+        <button onclick="document.getElementById('videoPlayer').play()">播放</button>
+        <button onclick="document.getElementById('videoPlayer').pause()">暂停</button>
+        <button onclick="document.getElementById('videoPlayer').currentTime -= 10">回退10秒</button>
+        <button onclick="document.getElementById('videoPlayer').currentTime += 10">快进10秒</button>
     </div>
 </body>
-</html>

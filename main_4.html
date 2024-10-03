@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主菜单</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: #575757;
+            overflow: hidden;
+            padding: 10px;
+            position: relative; /* 便于放置照片 */
+        }
+        .menu a {
+            float: left; /* 左对齐 */
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            background-color: #575757;
+        }
+        .photo {
+            position: absolute;
+            top: 10px; /* 垂直位置 */
+            right: 20px; /* 水平位置 */
+            cursor: pointer; /* 鼠标悬停时显示手形光标 */
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <a href="main_1.html">Download</a>
+    <a href="main_2.html">视频</a>
+    <a href="#" onclick="showAbout()">关于我们</a>
+    <a href="https://space.bilibili.com/3461574469617757?spm_id_from=333.1007.0.0">
+        <img src="photo/a_2.png" alt="照片" class="photo" width="100"> <!-- 控制照片宽度 -->
+    </a>
+</div>
+
+<div class="content" id="content">
+    <h1>欢迎来到我们的页面</h1>
+    <p>请选择上面的菜单项了解更多信息。</p>
+    <p> <a href="https://space.bilibili.com/3461574469617757?spm_id_from=333.1007.0.0">点击这里</a> 关注我们哦！</p>
+</div>
+
+<script>
+    function showAbout() {
+        document.getElementById("content").innerHTML = `
+            <h1>关于我们</h1>
+            <p>这是一个hellokali的网站。</p>
+            <p>欢迎访问，有任何问题请联系我们。</p>
+            <p>联系方式：13668154414@163.com 或 my13668154414@outlook.com</p>
+        `;
+    }
+</script>
+
+</body>
+</html>
